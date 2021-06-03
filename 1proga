@@ -1,0 +1,42 @@
+#include <iostream>
+#include <conio.h>
+#include <cstring>
+#include <typeinfo>
+using namespace std;
+int main()
+{
+	string str1;
+	cout << "INPUT CHAR: ";
+	cin >> str1;
+	cout << "\n";
+	if (str1.length() > 1)
+	{
+		while (str1.length() > 1)
+		{
+			cout << "ERROR! TRY AGAIN: ";
+			cin >> str1;
+			cout << "\n";
+		}
+	}
+	string str2;
+	cout << "INPUT STRING: ";
+	cin >> str2;
+	cout << "\n";
+	if (str2.length() <= 1)
+	{
+		while (str2.length() <= 1)
+		{
+			cout << "ERROR! TRY AGAIN: ";
+			cin >> str2;
+			cout << "\n";
+		}
+	}
+	if (str2.find(str1) == -1)
+	{
+		cout << "THE CHAR " << str1 << " IS MISSING FROM THE STRING " << str2;
+	}
+	else
+	{
+		cout << "\n" << "POSITION " << str1 << " FROM THE " << str2 << ": " << str2.find(str1) + 1;
+	}
+}
